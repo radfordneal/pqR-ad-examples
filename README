@@ -1,0 +1,9 @@
+Examples of automatic differentiation in pqR.  
+
+The .r files can be run with the test version of pqR that has a
+preliminary implementation of automatic differentiation that is
+available at pqR-project.org.  Saved output from running them is in
+the corresponding .out and possiblly .pdf files.
+
+Documentation on the automatic differentiation facilitities is
+available in pqR-project.org/test/help-gradient.txt
