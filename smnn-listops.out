@@ -30,6 +30,8 @@ No helper threads, task merging enabled, uncompressed pointers.
 > # Compute the output of a network with two hidden layers
 > # (with tanh activation function), when given 'x' as input.
 > # Parameters are in the list 'L'.
+> #
+> # This version uses arithmetic on lists.
 > 
 > nnet <- function (x, L)
 + {
@@ -80,12 +82,7 @@ No helper threads, task merging enabled, uncompressed pointers.
 + 
 +         # Update parameters to reduce squared error.
 + 
-+         L$b1 <- L$b1 - step * as.vector (g$b1)
-+         L$W1 <- L$W1 - step * as.vector (g$W1)
-+         L$b2 <- L$b2 - step * as.vector (g$b2)
-+         L$W2 <- L$W2 - step * as.vector (g$W2)
-+         L$b3 <- L$b3 - step * as.vector (g$b3)
-+         L$W3 <- L$W3 - step * as.vector (g$W3)
++         L <- L - step * g
 +     }
 + 
 +     L
@@ -96,7 +93,7 @@ No helper threads, task merging enabled, uncompressed pointers.
 > 
 > set.seed(1)
 > 
-> pdf("smnn.pdf",width=8,height=4.6)
+> pdf("smnn-listops.pdf",width=8,height=4.6)
 > par(mfrow=c(1,2))
 > 
 > truef <- function (X) cos (2*sqrt(X[,1]*X[,2])) - 2*(0.4-X[,1])^2
@@ -413,7 +410,7 @@ Iteration 29800 : Error 0.0305
 Iteration 29900 : Error 0.0304 
 Iteration 30000 : Error 0.0302 
    user  system elapsed 
-116.360   1.933 124.468 
+118.311   2.052 129.016 
 > 
 > print(L)
 $b1

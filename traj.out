@@ -1,18 +1,20 @@
 
-pqR version 2.15.1 (2019-07-05), based on R 2.15.0 (2012-03-30)
+pqR version 2.15.1 (2020-07-23), based on R 2.15.0 (2012-03-30)
 
 R 2.15.0 is Copyright (C) 2012 The R Foundation for Statistical Computing
 ISBN 3-900051-07-0
 
-Modifications to R in pqR are Copyright (C) 2013-2019 Radford M. Neal
+Modifications to R in pqR are Copyright (C) 2013-2020 Radford M. Neal
 
 Some modules are from R-2.15.1 or later versions distributed by the R Core Team
 
-Platform: x86_64-unknown-linux-gnu (64-bit)
+Platform: x86_64-apple-darwin17.7.0 (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
 Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
 
 R is a collaborative project with many contributors.
 Type 'contributors()' for more information and
@@ -65,7 +67,7 @@ attr(,"gradient")
 + ))
 [1] 44.99701
    user  system elapsed 
-  0.028   0.000   0.028 
+  0.099   0.007   0.106 
 > 
 > 
 > # For this simple example with only one variable, optimizing without
@@ -78,5 +80,5 @@ attr(,"gradient")
 + ))
 [1] 44.99701
    user  system elapsed 
-  0.017   0.000   0.017 
+  0.071   0.000   0.072 
 > 
