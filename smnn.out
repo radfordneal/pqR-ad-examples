@@ -40,8 +40,8 @@ No helper threads, task merging enabled, uncompressed pointers.
 > 
 > 
 > # Train network with hidden layers of n1 and n2 units  on
-> # data in X and y.  Initialize with std. dev. 'sd'.  Do
-> # 'iters gradient descent iterations with stepsize 'step'.
+> # data in 'X' and 'y'.  Initialize with std. dev. 'sd'.  Do
+> # 'iters' gradient descent iterations with stepsize 'step'.
 > 
 > train <- function (X, y, n1, n2, iters, step, sd=0.1)
 + {
@@ -57,7 +57,7 @@ No helper threads, task merging enabled, uncompressed pointers.
 +     L$W3 <- rnorm (n2,sd=sd)
 + 
 +     # Train for 'iters' iterations to minimize squared 
-+     # error predicting y.
++     # error predicting 'y'.
 + 
 +     for (i in 1:iters) {
 + 
@@ -413,7 +413,7 @@ Iteration 29800 : Error 0.0305
 Iteration 29900 : Error 0.0304 
 Iteration 30000 : Error 0.0302 
    user  system elapsed 
-116.360   1.933 124.468 
+116.838   2.077 120.064 
 > 
 > print(L)
 $b1

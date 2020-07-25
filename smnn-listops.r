@@ -1,8 +1,9 @@
+# Like smnn.r, except this version uses arithmetic on lists for the
+# gradient descent updates.
+
 # Compute the output of a network with two hidden layers
 # (with tanh activation function), when given 'x' as input.
 # Parameters are in the list 'L'.
-#
-# This version uses arithmetic on lists.
 
 nnet <- function (x, L)
 {
@@ -13,8 +14,8 @@ nnet <- function (x, L)
 
 
 # Train network with hidden layers of n1 and n2 units  on
-# data in X and y.  Initialize with std. dev. 'sd'.  Do
-# 'iters gradient descent iterations with stepsize 'step'.
+# data in 'X' and 'y'.  Initialize with std. dev. 'sd'.  Do
+# 'iters' gradient descent iterations with stepsize 'step'.
 
 train <- function (X, y, n1, n2, iters, step, sd=0.1)
 {
@@ -30,7 +31,7 @@ train <- function (X, y, n1, n2, iters, step, sd=0.1)
     L$W3 <- rnorm (n2,sd=sd)
 
     # Train for 'iters' iterations to minimize squared 
-    # error predicting y.
+    # error predicting 'y'.
 
     for (i in 1:iters) {
 
