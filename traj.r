@@ -1,4 +1,4 @@
-# Find the distance travelled by a projectile launched on level
+# Find the distance travelled by a projectile launched on level 
 # ground with initial velocity (vx,vy), with no air resistance.
 
 distance_travelled <- function (vx, vy, dt=0.0001, g=9.8) {
